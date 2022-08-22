@@ -94,12 +94,12 @@ function App() {
 
   const divide = (number) => {
     let calculatedNumber = parseFloat(previousTotal) / parseFloat(number);
-    // {calculatedNumber > 0 ? setRunningTotal(calculatedNumber): null}
-    if (calculatedNumber == Infinity || -Infinity){
-      calculatedNumber=0
-    }
+    // {!calculatedNumber === 0 ? setRunningTotal(calculatedNumber): 0}
+    if (number === 0){
+      calculatedNumber = 0
+    } else{
     setRunningTotal(calculatedNumber);
-    setCalculatedTotal(calculatedNumber);
+    setCalculatedTotal(calculatedNumber);}
   }
 
 
